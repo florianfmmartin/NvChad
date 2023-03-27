@@ -13,6 +13,8 @@ local options = {
   },
   disable_netrw = true,
   hijack_netrw = true,
+  -- open_on_setup = false,
+  -- ignore_ft_on_setup = { "alpha" },
   hijack_cursor = true,
   hijack_unnamed_buffer_when_opening = false,
   update_cwd = true,
@@ -25,9 +27,10 @@ local options = {
     side = "left",
     width = 25,
     hide_root_folder = true,
+    preserve_window_proportions = false,
   },
   git = {
-    enable = false,
+    enable = true,
     ignore = true,
   },
   filesystem_watchers = {
@@ -35,15 +38,15 @@ local options = {
   },
   actions = {
     open_file = {
-      resize_window = true,
+      resize_window = false,
     },
   },
   renderer = {
-    highlight_git = false,
+    highlight_git = true,
     highlight_opened_files = "none",
 
     indent_markers = {
-      enable = false,
+      enable = true,
     },
 
     icons = {

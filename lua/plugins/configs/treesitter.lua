@@ -6,6 +6,15 @@ end
 
 require("base46").load_highlight "treesitter"
 
+-- Add for rainbow with base46
+vim.cmd 'hi link rainbowcol1 Function'
+vim.cmd 'hi link rainbowcol2 Special'
+vim.cmd 'hi link rainbowcol3 String'
+vim.cmd 'hi link rainbowcol4 Label'
+vim.cmd 'hi link rainbowcol5 Number'
+vim.cmd 'hi link rainbowcol6 Constant'
+vim.cmd 'hi link rainbowcol7 Keyword'
+
 local options = {
   ensure_installed = {
     "lua",
@@ -17,6 +26,10 @@ local options = {
   },
 
   indent = {
+    enable = true,
+  },
+
+  rainbow = {
     enable = true,
   },
 }

@@ -11,10 +11,11 @@ local plugins = {
     end,
   },
 
-  ["NvChad/extensions"] = { branch = "main", module = { "telescope", "nvchad" } },
+  ["p00f/nvim-ts-rainbow"] = {},
+
+  ["NvChad/extensions"] = { module = { "telescope", "nvchad" } },
 
   ["NvChad/base46"] = {
-    branch = "master",
     config = function()
       local ok, base46 = pcall(require, "base46")
 
@@ -196,7 +197,7 @@ local plugins = {
 
   -- Only load whichkey after all the gui
   ["folke/which-key.nvim"] = {
-    disable = true,
+    disable = false,
     module = "which-key",
     keys = { "<leader>", '"', "'", "`" },
     config = function()

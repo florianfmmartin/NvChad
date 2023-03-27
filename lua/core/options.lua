@@ -7,18 +7,27 @@ g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
 g.theme_switcher_loaded = false
 
+opt.list = true
+opt.listchars = {
+   tab = "→ ",
+   eol = "¬",
+   space = "⋅",
+}
+opt.scrolloff = 8
+
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
+opt.title = true
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 opt.smartindent = true
-opt.tabstop = 2
-opt.softtabstop = 2
+opt.tabstop = 4
+opt.softtabstop = 4
 
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
@@ -48,6 +57,7 @@ opt.updatetime = 250
 opt.whichwrap:append "<>[]hl"
 
 g.mapleader = " "
+g.maplocalleader = ","
 
 -- disable some builtin vim plugins
 local default_plugins = {
@@ -86,10 +96,11 @@ end
 local default_providers = {
   "node",
   "perl",
-  "python3",
   "ruby",
 }
 
 for _, provider in ipairs(default_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
+
+vim.g["loaded_python3_provider"] = 1

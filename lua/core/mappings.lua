@@ -20,7 +20,7 @@ M.general = {
   },
 
   n = {
-    ["<ESC>"] = { "<cmd> noh <CR>", "no highlight" },
+    ["<ESC>"] = { "<cmd> :w <CR>", "save file" },
 
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "window left" },
@@ -299,7 +299,7 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<A-i>"] = {
+    ["<leader>tf"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
@@ -323,7 +323,7 @@ M.nvterm = {
 
   n = {
     -- toggle in normal mode
-    ["<A-i>"] = {
+    ["<leader>tf"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
